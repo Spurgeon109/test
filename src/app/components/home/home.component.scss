@@ -1,0 +1,59 @@
+.wrapper{
+  display: flex;
+  margin: 5rem 0 0 2rem;
+  gap: 10rem;
+  .left-content{
+    max-width: 500px;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    background-color: antiquewhite;
+    .base-line{
+      color: var(--primary-color);
+      font-weight: bold;
+      font-size: 40px;
+      .name{
+        color: var(--red);
+      }
+    }
+    .sub-line{
+      margin: 2rem 0 0 0;
+      text-align: justify;
+      line-height: 1.5rem;
+    }
+    .contact-list{
+      margin: 2rem 0 0 0;
+      display: flex;
+      gap: 1rem;
+      button{
+        border: none;
+        border-radius: 30px;
+        background-color: black;
+        color: white;
+        padding: 1rem;
+        border: 1px;
+        cursor: pointer;
+        a{
+          color: white;
+          text-decoration-line: none;
+          &:hover{
+            color: black;
+          }
+        }
+        &:hover{
+          color: black;
+          background-color: pink;
+        }
+      }
+    }
+  }
+  .right-content{
+    max-width: 500px;
+    .list{
+      .title{
+        font-weight: bold;
+        font-size: 40px;
+      }
+    }
+  }
+}
+

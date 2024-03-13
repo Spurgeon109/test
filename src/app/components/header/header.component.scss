@@ -1,0 +1,23 @@
+.nav-items{
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  .btn{
+    background: none;
+    cursor: pointer;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 1rem;
+    border: none;
+    font-size: 20px;
+    color: grey;
+    transition: all 0.2s linear;
+  }
+  .line{
+    border-bottom: 3px solid white;
+    &:hover{
+      border-bottom: 3px solid var(--primary-color);
+    }
+
+  }
+}

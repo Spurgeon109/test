@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-app';
+  
+  @HostListener('document:paste', ['$event'])
+  pasteEvent(event: ClipboardEvent){
+    event.preventDefault()
+    event.stopPropagation()
+    const ele = event.target as HTMLElement
+    if( ele.id === 'input-ele' ){
+      const c = event.clipboardData?.getData('text/html') as string
+      const inputElememt = document.getElementById('input-ele') as HTMLElement
+      inputElememt.innerHTML = c
+    }
+  }
 }
+

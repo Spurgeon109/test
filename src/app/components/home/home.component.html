@@ -1,0 +1,26 @@
+<div class="wrapper">
+  <div class="left-content">
+    <div class="base-line">
+      Hey, My name is <span class="name">Sam Spurgeon</span>
+    </div>
+    <div class="sub-line">
+      I am a software engineer with passion of developing responsible web applications.
+    </div>
+    <div class="contact-list">
+      <button matTooltip="My Linked-in account"><a href="https://www.linkedin.com/in/spurgeon-li" target="_blank">in</a></button>
+      <button matTooltip="My git account"><a href="https://www.github.com/Spurgeon109" target="_blank">git</a></button>
+      <button matTooltip="G mail"><a href="mailto: samspurgeon109@gmail.com">M</a></button>
+      <button matTooltip="My Resume"><a (click)="openPdf()">R</a></button>
+    </div>
+  </div>
+  <div class="right-content">
+    <div class="list">
+      <span class="title">Summary of my skills</span>
+    </div>
+    <div class="chip-list">
+      <mat-chip-set aria-label="Fish selection">
+        <mat-chip *ngFor="let item of skills">{{ item }}</mat-chip>
+      </mat-chip-set>
+    </div>
+  </div>
+</div>
