@@ -1,26 +1,42 @@
-<div class="wrapper">
-  <div class="left-content">
-    <div class="base-line">
-      Hey, My name is <span class="name">Sam Spurgeon</span>
+<section class="main">
+  <div class="description-wrapper">
+    <span class="lvl-1">I am a Front End Developer</span>
+    <br>
+    <span class="lvl-2">
+      I hold 3+ years of professional experience in IT industry.
+      I have solid understanding of front end development
+      I also worked with azure cloud technologies. 
+    </span>
+    <div class="handles">
+      <a href="https://www.linkedin.com/in/spurgeon-li" target="_blank">
+        <mat-icon svgIcon="linkedin" matTooltip="My linkedin account"></mat-icon>
+      </a>
+      <a href="https://github.com/Spurgeon109" target="_blank">
+        <mat-icon svgIcon="git" matTooltip="My github account"></mat-icon>
+      </a>
+      <mat-icon (click)="downloadResume($event)" matTooltip="Download my resume">download</mat-icon>
     </div>
-    <div class="sub-line">
-      I am a software engineer with passion of developing responsible web applications.
-    </div>
-    <div class="contact-list">
-      <button matTooltip="My Linked-in account"><a href="https://www.linkedin.com/in/spurgeon-li" target="_blank">in</a></button>
-      <button matTooltip="My git account"><a href="https://www.github.com/Spurgeon109" target="_blank">git</a></button>
-      <button matTooltip="G mail"><a href="mailto: samspurgeon109@gmail.com">M</a></button>
-      <button matTooltip="My Resume"><a (click)="openPdf()">R</a></button>
-    </div>
-  </div>
-  <div class="right-content">
-    <div class="list">
-      <span class="title">Summary of my skills</span>
-    </div>
-    <div class="chip-list">
-      <mat-chip-set aria-label="Fish selection">
-        <mat-chip *ngFor="let item of skills">{{ item }}</mat-chip>
-      </mat-chip-set>
+    <div class="lg-btn-wrapper">
+      <button class="btn" (click)="scrollToForm()">Let us talk</button>
     </div>
   </div>
+</section>
+<div class="form-section" id="contact">
+  <form #formRef="ngForm" [formGroup]="formGroup">
+    <div class="ico">
+      <span class="icon">i</span>
+    </div>
+    <span class="title">Please fill the form</span>
+    <mat-form-field appearance="outline">
+      <mat-label>Your name</mat-label>
+      <input type="text" matInput slot="" required>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Leave your thoughts</mat-label>
+      <textarea cols="30" rows="10" matInput formControlName="content" required></textarea>
+    </mat-form-field>
+    <button class="submit-btn" type="submit" [disabled]="formRef.form.status !== 'VALID'">
+      <a href='mailTo: samspurgeon109@gmail.com?subject='>Open Mail</a>
+    </button>
+  </form>
 </div>

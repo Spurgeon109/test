@@ -11,6 +11,9 @@ import { HomeComponent } from './components/home/home.component'
 import { MatIconModule } from '@angular/material/icon'
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatChipsModule } from '@angular/material/chips'
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import { MatChipsModule } from '@angular/material/chips'
     MatInputModule,
     MatIconModule,
     MatTooltipModule,
-    MatChipsModule
+    MatChipsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
